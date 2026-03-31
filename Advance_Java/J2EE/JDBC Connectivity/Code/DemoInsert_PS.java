@@ -15,7 +15,8 @@ public class DemoInsert_PS {
 		MysqlDataSource ds;
 		
 		try
-		{
+		{  
+			//DB connection part
 			ds=new MysqlDataSource();
 			ds.setUser("root");
 			ds.setPassword("root");
