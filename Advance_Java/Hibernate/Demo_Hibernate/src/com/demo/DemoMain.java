@@ -12,7 +12,7 @@ public class DemoMain {
 		// TODO Auto-generated method stub
 //load the configuration file
 		/*Configuration conf=new Configuration();
-		  conf.configure("sleep.cgf.xml"); //loads hibernate.cfg.xml file
+		conf.configure("sleep.cgf.xml"); //loads hibernate.cfg.xml file
 		//get the session factory
 		SessionFactory sf=conf.buildSessionFactory();*///buildsessionfactory-it will return pool of connection
 		
