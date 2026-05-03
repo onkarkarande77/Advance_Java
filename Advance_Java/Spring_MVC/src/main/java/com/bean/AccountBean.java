@@ -6,7 +6,7 @@ public class AccountBean {
 	
 	public AccountBean() {
 		super();
-		 // TODO Auto-generated constructor stub
+		  // TODO Auto-generated constructor stub
 	}
 
 	public AccountBean(Integer id, String name) {
