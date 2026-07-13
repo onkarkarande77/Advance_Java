@@ -13,7 +13,7 @@ The **Advance_Java** repository contains structured examples and projects that d
 It covers everything from JDBC database connectivity to Servlets, JSP, MVC architecture, Hibernate ORM, session management, and CRUD applications.
 
 Whether you're preparing for interviews, college practicals, or Java backend development, this repository provides practical implementations of important Advanced Java concepts.
-
+   
 ---
 
 # 📚 Topics Covered
