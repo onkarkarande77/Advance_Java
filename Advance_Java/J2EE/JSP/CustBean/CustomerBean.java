@@ -6,7 +6,7 @@ public class CustomerBean {
 	private String custName;
 	
 	public CustomerBean() {
-		super();
+		super(); 
 	}
 	
 	public CustomerBean(String custId, String custName) {
