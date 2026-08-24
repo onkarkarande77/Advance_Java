@@ -11,5 +11,5 @@ public class ListDataMain {
 	  ListData ld=ctx.getBean("std",ListData.class);
 	   ld.showStdData();
 	
-	} 
+	}  
 }
