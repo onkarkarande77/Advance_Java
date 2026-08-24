@@ -9,7 +9,7 @@ public class ListDataMain {
 		// TODO Auto-generated method stub
       ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
 	  ListData ld=ctx.getBean("std",ListData.class);
-	   ld.showStdData();
+	   ld.showStdData(); 
 	
 	}  
 }
