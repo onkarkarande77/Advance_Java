@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 
-public class DemoInsert_PS {
+public class DemoInsert_PS { 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
