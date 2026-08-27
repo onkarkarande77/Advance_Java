@@ -7,7 +7,7 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 
 public class DemoInsert_PS { 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// TODO Auto-generated method stub
 		Connection conn;
 		PreparedStatement prp;
