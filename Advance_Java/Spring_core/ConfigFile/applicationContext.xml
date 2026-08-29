@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	 http://www.springframework.org/schema/mvc 
+   http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+  	http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx 
+   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+   
+   <context:property-placeholder location="login.properties,db.properties"/>
+   
+   
+    <!-- this is for the annotation(scan for the searching the where is the a bean of the class) -->
+    <context:component-scan base-package="com.core.annotation,com.annotation.student,com.dao"/>
+    <context:annotation-config/><!-- this will unable spring core annotation/not enable spring restapi/   -->
+   
+     <!-- Spring Dao -->
+   <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+     <property name="driverClassName" value="${db.class}"/>
+     <property name="url" value="${db.url}"/>
+     <property name="username" value="${db.user}"/>
+     <property name="password" value="${db.password}"/>
+   </bean>
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="ds"/>
+	</bean>
+   
+   
+    
+   <!-- create a bean for the class HelloWorld  -->
+   <bean id="h" class="com.core.HelloWorld"/>
+   <!--  similar to HelloWorld h=new HelloWorld() -->
+   <bean id="s" class="com.core.SumNo"/>
+   <bean id="std1" class="com.core.StudentData">
+   <!-- injection of simple values into the bean properties -->
+   <property name="stdId" value="666"/>
+   <property name="stdName" value="spring"/>
+   <property name="stdHt" value="3.9f"/>
+    </bean>
+      <bean id="mc" class="com.core.MasterCard"/>
+    <bean id="p"  class="com.core.PaymentApplicationClass">
+        <property name="card" ref="mc"/>
+    </bean> 
+    <!-- below bean for assignment -->
+       <bean id="m" class="com.Assignment.MasterCard"/>
+       <bean id="vc" class="com.Assignment.VisaCard"/>
+       
+       <bean id="pc" class="com.Assignment.CardAppClass">
+          <property name="ca" ref="m"/>
+         <!--   <property name="ca" ref="vc"/>-->
+        </bean>
+         <bean id="na" class="com.Assignment.CardAppClass">
+           <property name="ca" ref="vc"/>
+        </bean>
+         
+ 
+     <bean id="st" class="com.Assignment.StdBean">
+        <constructor-arg value="101"/>
+        <constructor-arg value="java"/>
+     </bean>
+     
+     <!-- internal injection -->
+     <bean id="per" class="com.core.internal.Person">
+       <property name="per_id" value="1"/>
+       <property name="per_name" value="spring"/>
+       <property name="addr">
+       
+         <bean class="com.core.internal.Address">
+            <property name="city" value="pune"/>
+            <property name="state" value="MH"/>
+         </bean>
+       </property>
+      </bean>
+     
+     <bean id="lb" class="com.properties.LoginBean">
+      <property name="userName" value="${login.user}"/>
+      <property name="userPwd" value="${login.password}"/>
+     </bean>
+      
+    <!-- file injection  -->   
+       <bean id="r" class="com.resoureinjection.ResourceInjection">
+        <property name="file" value="Onkar_Resume.pdf"/>
+       
+       </bean>
+     
+     <!-- using the collection by List  -->
+     <bean id="std" class="com.collection.ListData">
+        <property name="stdData">
+           <list>
+              <value>Java</value>
+              <value>Spring</value>
+              <value>DatBase</value>
+           </list>
+        </property>
+     </bean>
+     
+   
+
+      
+           
+</beans>

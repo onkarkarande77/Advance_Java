@@ -1,7 +1,7 @@
 package com.cust;
 
 public class CustomerBean {
-	
+	//prop
 	private String custId;
 	private String custName;
 	
