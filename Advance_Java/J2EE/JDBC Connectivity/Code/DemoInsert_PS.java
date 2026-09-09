@@ -3,7 +3,7 @@ package com.jdbc;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.mysql.cj.jdbc.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource; 
 
 public class DemoInsert_PS {
 
