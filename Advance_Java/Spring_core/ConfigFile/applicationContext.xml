@@ -27,6 +27,9 @@
      <property name="username" value="${db.user}"/>
      <property name="password" value="${db.password}"/>
    </bean>
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="ds"/>
+	</bean>
    
    
     

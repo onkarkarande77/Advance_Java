@@ -5,9 +5,9 @@ import java.sql.PreparedStatement;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 
-public class DemoInsert_PS {
+public class DemoInsert_PS { 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// TODO Auto-generated method stub
 		Connection conn;
 		PreparedStatement prp;
@@ -15,7 +15,8 @@ public class DemoInsert_PS {
 		MysqlDataSource ds;
 		
 		try
-		{
+		{  
+			//DB connection part
 			ds=new MysqlDataSource();
 			ds.setUser("root");
 			ds.setPassword("root");

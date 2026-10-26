@@ -1,7 +1,7 @@
 package com.cust;
 
 public class CustomerBean {
-	
+	//prop
 	private String custId;
 	private String custName;
 	
@@ -9,6 +9,9 @@ public class CustomerBean {
 		super();
 	} 
 	
+		super(); 
+	}
+	 
 	public CustomerBean(String custId, String custName) {
 		super();
 		this.custId = custId;
