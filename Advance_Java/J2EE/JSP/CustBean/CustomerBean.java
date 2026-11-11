@@ -10,7 +10,7 @@ public class CustomerBean {
 	} 
 	
 		super(); 
-	}
+	} 
 	 
 	public CustomerBean(String custId, String custName) {
 		super();
