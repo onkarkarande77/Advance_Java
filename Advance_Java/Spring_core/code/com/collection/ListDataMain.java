@@ -10,7 +10,7 @@ public class ListDataMain {
       ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
 	  ListData ld=ctx.getBean("std",ListData.class);
 	   ld.showStdData();  
-	
+	 
 	}  
 }
  
